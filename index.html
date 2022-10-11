@@ -389,7 +389,7 @@
             </div>
         </div>
     </footer>
-    
+
 
 
     <div class="backdrop is-hidden" data-modal>
@@ -400,27 +400,32 @@
                 </svg>
             </button>
             <form>
-                <label>
-                    Ім'я
-                    <input type="text" name="username" autofocus/> 
-                    <svg  with="18" height="18">
+                <div class="form-field">
+                    <label for="username"> Ім'я </label>
+                    <input type="text" name="username" id="username" />
+                    <svg with="18" height="18">
                         <use href="./images/symbol-defs.svg#icon-person"></use>
                     </svg>
-                    
-                </label>
-                <label>
-                    Телефон
-                    <input type="number" name="usertel" autofocus />
-                </label>
-                <label>
-                    Пошта
-                    <input type="email" name="email" />
-                </label>
+                </div>
 
-                <label>
-                    Коментар
-                    <input type="email" name="email" />
-                </label>
+                <div class="form-field">
+
+                    <label for="tel">Телефон</label>
+                    <input type="tel" name="usertel" id="tel" />
+                </div>
+                <div class="form-field">
+                    <label for="mail">Пошта </label>
+                    <input type="email" name="mail" id="mail" />
+                </div>
+                <div class="form-field">
+                    <label for="coment">Коментар</label>
+                    <textarea name="" id="coment" cols=100% rows="10" placeholder="Введіть текст"></textarea>
+                </div>
+
+                <div class="form-field">
+                    <input type="checkbox" name="" value="" id="dogovor" checked>
+                    <label for="dogovor"> Погоджуюся з розсилкою та приймаю Умови договору</label>
+                </div>
                 <button type="submit">Відправити</button>
             </form>
         </div>
