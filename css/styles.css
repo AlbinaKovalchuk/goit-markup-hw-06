@@ -732,54 +732,18 @@ img {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     transform: translate(-50%, -50%) scaleY(1) rotate(0deg);
-    transition: transform 20ms linear;
+    transition: transform 250ms linear;
 }
 
 /*  початковий стан модалки захований backdrop-ом   */
 .backdrop.is-hidden .modal {
     transform: translate(-50%, -50%) scaleY(0) rotate(90deg);
 }
-
 .backdrop.is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
 }
-
-.form {
-    position: relative;
-    width: 528px;
-    height: 581px;
-    background: var(--accent-text);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    padding: 40px;
-
-    outline: 2px solid tomato;
-}
-
-input {
-    width: 100%;
-    padding: 8px;
-    font-family: inherit;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-}
-
-textarea {
-    width: 100%;
-    padding: 12px 16px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-}
-label {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    text-align: left;
-    margin-bottom: 4px;
-}
-
 .modal-close-btn {
     position: absolute;
     top: 8px;
@@ -796,14 +760,47 @@ label {
     padding: 0;
     cursor: pointer;
 }
-
 .icon-close {
     transition: fill var(--timing-function);
 }
-
 .icon-close:hover,
 .icon-close:focus {
     fill: var(--acсent-backgroud);
+}
+
+.form {
+    position: relative;
+    width: 528px;
+    height: 581px;
+    background: var(--accent-text);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 40px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 8px;
+    font-family: inherit;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 40px;
+    transition: border-color var(--timing-function);
+}
+
+.form-label {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 4px;
+}
+
+.form-textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
 }
 
 .title-modal {
@@ -818,11 +815,23 @@ label {
 
 .form-field {
     position: relative;
+    transition: fill var(--timing-function);
 }
+
 .icon {
     position: absolute;
     top: 50%;
     left: 12px;
-    display: inline-block;
+    
+    
 }
 
+.form-input:hover,
+.form-input:focus {
+    border-color: var(--acсent-backgroud);
+}
+
+.form-field:hover,
+.form-field:focus {
+    fill: var(--acсent-backgroud);
+}
