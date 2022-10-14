@@ -401,7 +401,7 @@
         </div>
     </footer>
 
-<!---------------------------------модальне вікно--------->
+    <!---------------------------------модальне вікно--------->
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <form class="form">
@@ -437,15 +437,17 @@
 
                 <div class="form-field">
                     <label for="coment" class="form-label">Коментар</label>
-                    <textarea name="coment" id="coment" class="form-textarea" cols="" rows="10" placeholder="Введіть текст"></textarea>
+                    <textarea name="coment" id="coment" class="form-textarea" cols="" rows="10"
+                        placeholder="Введіть текст"></textarea>
                 </div>
 
                 <div class="form-field">
                     <label for="dogovor" class="form-label">Погоджуюся з розсилкою та приймаю Умови договору</label>
                     <input type="checkbox" class="form-input" name="dogovor" value="" id="dogovor" checked>
                 </div>
-                <button type="submit">Відправити</button>
             </form>
+
+            <button class="form-button" type="submit">Відправити</button>
         </div>
     </div>
     <script src="./js/modal.js"></script>

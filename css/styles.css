@@ -739,11 +739,13 @@ img {
 .backdrop.is-hidden .modal {
     transform: translate(-50%, -50%) scaleY(0) rotate(90deg);
 }
+
 .backdrop.is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
 }
+
 .modal-close-btn {
     position: absolute;
     top: 8px;
@@ -760,9 +762,11 @@ img {
     padding: 0;
     cursor: pointer;
 }
+
 .icon-close {
     transition: fill var(--timing-function);
 }
+
 .icon-close:hover,
 .icon-close:focus {
     fill: var(--acсent-backgroud);
@@ -786,6 +790,7 @@ img {
     border-radius: 4px;
     padding-left: 40px;
     transition: border-color var(--timing-function);
+    cursor: pointer;
 }
 
 .form-label {
@@ -822,8 +827,6 @@ img {
     position: absolute;
     top: 50%;
     left: 12px;
-    
-    
 }
 
 .form-input:hover,
@@ -835,3 +838,25 @@ img {
 .form-field:focus {
     fill: var(--acсent-backgroud);
 }
+.form-button {display: inline-block;
+    
+    width: 200px;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    align-items: center;
+    text-align: center;
+    padding: 10px 52px;
+    color: var(--accent-text);
+    border-color: #188CE8;
+    border:none ;
+    background: #188CE8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
