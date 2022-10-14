@@ -162,7 +162,7 @@ img {
     gap: 50px;
     font-weight: 500;
     line-height: 1.14;
-    color: #212121;
+    color: var(--secondary-text-color);
     letter-spacing: 0.02em;
 }
 
@@ -202,7 +202,7 @@ img {
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    color: #757575;
+    color:var(--primary-text-color);
     fill: currentColor;
     transition: color var(--timing-function);
 }
@@ -746,6 +746,15 @@ img {
     pointer-events: none;
 }
 
+.form {
+    position: relative;
+    width: 528px;
+    height: 581px;
+    background: var(--accent-text);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 40px;
+}
 .modal-close-btn {
     position: absolute;
     top: 8px;
@@ -772,41 +781,7 @@ img {
     fill: var(--acсent-backgroud);
 }
 
-.form {
-    position: relative;
-    width: 528px;
-    height: 581px;
-    background: var(--accent-text);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    padding: 40px;
-}
 
-.form-input {
-    width: 100%;
-    padding: 8px;
-    font-family: inherit;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-    padding-left: 40px;
-    transition: border-color var(--timing-function);
-    cursor: pointer;
-}
-
-.form-label {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    text-align: left;
-    margin-bottom: 4px;
-}
-
-.form-textarea {
-    width: 100%;
-    padding: 12px 16px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-}
 
 .title-modal {
     font-weight: 700;
@@ -818,28 +793,72 @@ img {
     margin-bottom: 12px;
 }
 
-.form-field {
-    position: relative;
+
+.form-input { 
+    display: block;
+    width: 100%;
+    padding: 8px;
+    font-family: inherit;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 40px;
+    transition: border var(--timing-function);
+    cursor: pointer;
+    margin-top: 4px;
+    margin-bottom: 10px;
+   }
+
+.form-label {position: relative;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    align-self: center;
+    align-content: space-between;
     transition: fill var(--timing-function);
+   }
+
+
+.form-textarea {
+    margin-top: 4px;
+    width: 100%;
+    padding: 12px 16px;
+    border-color: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border-color var(--timing-function);
 }
 
 .icon {
     position: absolute;
-    top: 50%;
-    left: 12px;
-}
+     top: 30px; 
+     left: 12px; 
+   }
+
+
+/* КАК ЗАДАТЬ ЦВЕТ текста ???  */
+/* .placeholder {font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);} */
+
 
 .form-input:hover,
 .form-input:focus {
+        border-color: var(--acсent-backgroud);
+    }
+
+.form-textarea:hover,
+.form-textarea:focus {
     border-color: var(--acсent-backgroud);
 }
 
-.form-field:hover,
-.form-field:focus {
+.form-label:hover,
+.form-label:focus {
     fill: var(--acсent-backgroud);
 }
-.form-button {display: inline-block;
-    
+
+.form-button {
+    display: block;
+    margin: 0px auto;
     width: 200px;
     padding: 10px;
     font-weight: 700;
@@ -851,12 +870,64 @@ img {
     padding: 10px 52px;
     color: var(--accent-text);
     border-color: #188CE8;
-    border:none ;
+    border: none;
     background: #188CE8;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: box-shadow var(--timing-function);
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
     border-radius: 4px;
     cursor: pointer;
 }
 
+.form-button:hover,
+.form-button:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
 
 
+/* .visually-hidden  скрывает встроеный чек*/
+.check-inp {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+.check-icon {
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--secondary-text-color);
+    border-radius: 2px;
+    margin-right: 7px;
+
+}
+
+.check-inp:checked+.check-icon {
+    border: var(--acсent-backgroud);
+    background-color: var(--acсent-backgroud);
+    background-image: url(../images/iconcheck.svg);
+    background-size: contain;
+    background-origin: border-box;
+}
+
+.dogovor-accent {
+    color: var(--acсent-backgroud);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+}
