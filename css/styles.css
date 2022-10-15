@@ -814,8 +814,6 @@ img {
     border-radius: 4px;
     transition: border var(--timing-function);
     cursor: pointer;
-
-
 }
 
 .form-label {
@@ -824,10 +822,7 @@ img {
     transition: fill var(--timing-function);
     font-size: 16px;
     margin-bottom: 10px;
-
 }
-
-
 
 .form-textarea {
     width: 100%;
@@ -845,7 +840,6 @@ img {
     top: 50%;
     left: 12px;
     transform: translateY(-50%);
-
 }
 
 .form-input:hover,
