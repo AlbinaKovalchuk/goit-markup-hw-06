@@ -815,7 +815,7 @@ img {
     align-self: center;
     align-content: space-between;
     transition: fill var(--timing-function);
-   }
+    }
 
 
 .form-textarea {
