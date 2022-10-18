@@ -824,6 +824,11 @@ img {
     margin-bottom: 10px;
 }
 
+.form-label:last-child {
+    margin-bottom: 0px;
+}
+
+
 .form-textarea {
     width: 100%;
     padding: 12px 16px;
@@ -834,7 +839,10 @@ img {
     border-radius: 4px;
     transition: border-color var(--timing-function);
 }
-
+.form-textarea::placeholder {
+    font-size: 12px;
+    color: tomato;
+}
 .icon {
     position: absolute;
     top: 50%;
@@ -853,7 +861,7 @@ img {
     border-color: var(--acсent-backgroud);
 } */
 
-.form-container:focus-within > .icon {
+.form-container:focus-within>.icon {
     fill: var(--acсent-backgroud);
     border-color: var(--acсent-backgroud)
 }
